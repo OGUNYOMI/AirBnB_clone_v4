@@ -28,8 +28,7 @@ def hbnb_filters(the_id=None):
     """
     handles request to custom template with states, cities & amentities
     """
-    state_objs = storage.all('State').values()
-    states = dict([state.name, state] for state in state_objs)
+    state_objs = storage.all('State').values()    states = dict([state.name, state] for state in state_objs)
     amens = storage.all('Amenity').values()
     places = storage.all('Place').values()
     users = dict([user.id, "{} {}".format(user.first_name, user.last_name)]
